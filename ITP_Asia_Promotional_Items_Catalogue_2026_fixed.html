@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITP ASIA — Premium Corporate Gift Catalogue 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #1B66B2;
+  --red: #D93030;
+  --green: #3B9A3B;
+  --purple: #8B4FA8;
+  --gold: #C47A00;
+  --dark: #111111;
+  --gray: #F5F5F5;
+  --border: #E0E0E0;
+  --text: #333333;
+  --light: #777777;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Sarabun', 'DM Sans', sans-serif; background: #ECECEC; }
+
+.page {
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto 8px;
+  background: white;
+  padding: 28px 30px 80px;
+  position: relative;
+  page-break-after: always;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+.co-name { color: var(--blue); font-weight: 700; font-size: 11px; letter-spacing: 2px; }
+.co-sub { color: var(--light); font-size: 9px; margin-top: 2px; }
+.h-right { text-align: right; color: var(--light); font-size: 9px; line-height: 1.8; }
+
+/* SECTION LABEL */
+.section-label {
+  display: flex; align-items: center; gap: 8px;
+  margin: 16px 0 12px;
+}
+.s-bar { width: 4px; height: 20px; border-radius: 2px; flex-shrink: 0; }
+.s-title { font-weight: 700; font-size: 12px; letter-spacing: 2.5px; color: var(--dark); }
+
+/* GRID */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+/* CARD */
+.card {
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.img-wrap {
+  width: 100%;
+  height: 200px;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
+}
+.img-wrap-cover img {
+  object-fit: contain;
+  padding: 0;
+}
+.card-body { padding: 12px 14px 14px; }
+.card-title { font-weight: 700; font-size: 13px; color: var(--dark); margin-bottom: 4px; line-height: 1.4; }
+.card-spec { font-size: 11px; color: #555; line-height: 1.7; margin-bottom: 10px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+.price-num { font-size: 30px; font-weight: 700; color: var(--blue); line-height: 1; }
+.price-unit { font-size: 10px; color: var(--light); margin-top: 2px; }
+.moq { font-size: 10px; color: #aaa; text-align: right; }
+.price-rfq { font-size: 12px; font-weight: 600; color: var(--blue); }
+
+/* WIDE CARD (image left, text right) */
+.card-wide { display: grid; grid-template-columns: 1fr 1fr; border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; }
+.card-wide .img-wrap { height: 220px; border-radius: 0; }
+.card-wide .card-body { padding: 16px 18px; display: flex; flex-direction: column; justify-content: center; }
+.price-table { width: 100%; font-size: 10.5px; color: #555; border-collapse: collapse; margin: 8px 0 12px; }
+.price-table td { padding: 3px 6px 3px 0; }
+.price-td-val { color: var(--blue); font-weight: 700; }
+
+/* NOTE */
+.note { font-size: 9.5px; color: #aaa; margin-top: 6px; font-style: italic; }
+
+/* COLORS BADGE */
+.colors-badge {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  border-top: none;
+}
+.f-left { background: var(--blue); padding: 10px 20px; min-width: 220px; }
+.f-right { background: #0d3570; padding: 10px 20px; flex: 1; display: flex; align-items: center; }
+.f-co { color: white; font-weight: 700; font-size: 10px; letter-spacing: 1px; }
+.f-contact { color: #a8c8f0; font-size: 8.5px; margin-top: 3px; }
+.f-note { color: #7aa8d8; font-size: 8px; line-height: 1.6; }
+
+/* PREMIUM SECTION */
+.premium-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #C47A00, #F0B429);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html, body {
+    width: 210mm;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    margin: 0;
+    padding: 20mm 15mm 22mm;
+    page-break-after: always;
+    break-after: page;
+    box-sizing: border-box;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .card { page-break-inside: avoid; break-inside: avoid; }
+  .card-wide { page-break-inside: avoid; break-inside: avoid; }
+  .grid-2 { page-break-inside: avoid; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====================================================== -->
+<!-- PAGE 1: DRINKWARE                                       -->
+<!-- ====================================================== -->
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="co-name">I T P &nbsp; A S I A &nbsp; C o . , L T D .</div>
+      <div class="co-sub">Premium Corporate Gift Catalogue 2026</div>
+    </div>
+    <div class="h-right">ราคายังไม่รวม VAT 7%</div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--blue);"></div>
+    <div class="s-title">DRINKWARE</div>
+  </div>
+
+  <!-- แก้วเลเซอร์ -->
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="img-wrap">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778470623/Gemini_Generated_Image_bdgr03bdgr03bdgr_bnf1de.png" alt="แก้ว Tumbler เลเซอร์">
+      </div>
+      <div class="card-body">
+        <div class="colors-badge">มีให้เลือกถึง 20 สี</div>
+        <div class="card-title">แก้ว Tumbler Stainless Steel</div>
+        <div class="card-spec">
+          แกะสลักโลโก้ด้วยเลเซอร์ (Laser Engraving)<br>
+          ทนทาน ไม่ลอก ไม่ซีด — คงทนระยะยาว<br>
+          ความจุ 20 oz. มีฝาปิด
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">150</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq" style="color:var(--blue); font-weight:700; font-size:13px;">✦ ขั้นต่ำเพียง 12 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778470157/Gemini_Generated_Image_42rsd642rsd642rs_uesofn.png" alt="แก้ว Tumbler หลายสี">
+      </div>
+      <div class="card-body">
+        <div class="colors-badge">มีให้เลือกมากกว่า 20 สี</div>
+        <div class="card-title">แก้ว Tumbler Stainless Steel</div>
+        <div class="card-spec">
+          มีสีให้เลือกมากกว่า 20 เฉดสี<br>
+          ระบุสีและตำแหน่งโลโก้ตามต้องการ<br>
+          เหมาะสำหรับของขวัญองค์กรทุกประเภท
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">150</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq" style="color:var(--blue); font-weight:700; font-size:13px;">✦ ขั้นต่ำเพียง 12 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- กระบอกน้ำ -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778471160/Gemini_Generated_Image_tittz6tittz6titt_rkvlnu.png" alt="กระบอกน้ำ 2 สี">
+      </div>
+      <div class="card-body">
+        <div class="colors-badge">สกรีนได้หลายตำแหน่ง</div>
+        <div class="card-title">กระบอกน้ำ Stainless Steel double wall</div>
+        <div class="card-spec">
+          สกรีนได้หลายสี หลายตำแหน่ง<br>
+          ความจุ 550 ml. มีหูหิ้ว<br>
+          เก็บความเย็น/ร้อนได้นาน
+        </div>
+        <div class="card-footer">
+          <div class="price-rfq">กรุณาติดต่อเพื่อรับใบเสนอราคา</div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778472775/May_8_2026_03_54_44_PM_nbhvcb.png" alt="กระบอกน้ำ 5 สี">
+      </div>
+      <div class="card-body">
+        <div class="colors-badge">มีให้เลือก 5 สี</div>
+        <div class="card-title">กระบอกน้ำ Stainless Steel double wall</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 ตำแหน่ง<br>
+          ความจุ 550 ml. มีสีให้เลือก 5 เฉดสี<br>
+          เก็บความเย็น/ร้อนได้นาน
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">246</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="f-left">
+      <div class="f-co">ITP ASIA CO.,LTD.</div>
+      <div class="f-contact">สิริภัสสร เทียนทิพย์ (น้ำหวาน) 063-541-6196</div>
+    </div>
+    <div class="f-right">
+      <div class="f-note">* ราคาประมาณการเบื้องต้น ยังไม่รวม VAT 7% &nbsp;·&nbsp; ราคาอาจเปลี่ยนแปลงตามปริมาณการสั่งซื้อ</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- PAGE 2: APPAREL                                         -->
+<!-- ====================================================== -->
+<!-- PAGE 2A: APPAREL + BAGS (แคนวาส+สายชาร์จ) -->
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="co-name">I T P &nbsp; A S I A &nbsp; C o . , L T D .</div>
+      <div class="co-sub">Premium Corporate Gift Catalogue 2026</div>
+    </div>
+    <div class="h-right">ราคายังไม่รวม VAT 7%</div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--red);"></div>
+    <div class="s-title">APPAREL</div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:20px;">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473281/ChatGPT_Image_8_%E0%B8%9E.%E0%B8%84._2569_16_32_00_sb1dmb.png" alt="หมวกแก๊ป">
+      </div>
+      <div class="card-body">
+        <div class="card-title">หมวกแก๊ป</div>
+        <div class="card-spec">
+          ปักโลโก้ (Embroidery) 1 จุด — คมชัด ไม่ลอก<br>
+          ผ้าคอมทวิล เนื้อหนานุ่ม ทรงดี ดูพรีเมียม<br>
+          Metal buckle adjuster — ปรับขนาดได้
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">200</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473209/ChatGPT_Image_8_%E0%B8%9E.%E0%B8%84._2569_16_09_08_waawtf.png" alt="เสื้อโปโล">
+      </div>
+      <div class="card-body">
+        <div class="card-title">เสื้อโปโล</div>
+        <div class="card-spec">
+          ผ้า TC Lacoste (Cotton 35% + Polyester 65%)<br>
+          ทรงสวย อยู่ทรง ใส่สบาย ไม่ร้อน<br>
+          มีสีให้เลือกหลายเฉดสี — สกรีนโลโก้ตามต้องการ
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">248</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--green);"></div>
+    <div class="s-title">BAGS &amp; POUCHES</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473334/ChatGPT_Image_May_8_2026_04_05_34_PM_cxzi9v.png" alt="กระเป๋าแคนวาส">
+      </div>
+      <div class="card-body">
+        <div class="card-title">กระเป๋าผ้าแคนวาส</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          ขนาด 42×45×14 ซม.<br>
+          ผ้าแคนวาส ทนทาน
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">92</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473706/ChatGPT_Image_May_8_2026_03_31_01_PM_p5x3lt.png" alt="กระเป๋าสายชาร์จ">
+      </div>
+      <div class="card-body">
+        <div class="card-title">กระเป๋าจัดระเบียบสายชาร์จ</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          ขนาด 11×19.5×5.5 ซม.
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">189</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="f-left">
+      <div class="f-co">ITP ASIA CO.,LTD.</div>
+      <div class="f-contact">สิริภัสสร เทียนทิพย์ (น้ำหวาน) 063-541-6196</div>
+    </div>
+    <div class="f-right">
+      <div class="f-note">* ราคาประมาณการเบื้องต้น ยังไม่รวม VAT 7% &nbsp;·&nbsp; ราคาอาจเปลี่ยนแปลงตามปริมาณการสั่งซื้อ</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2B: BAGS (กระสอบ+โน้ตบุ๊ค) รูปใหญ่ -->
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="co-name">I T P &nbsp; A S I A &nbsp; C o . , L T D .</div>
+      <div class="co-sub">Premium Corporate Gift Catalogue 2026</div>
+    </div>
+    <div class="h-right">ราคายังไม่รวม VAT 7%</div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--green);"></div>
+    <div class="s-title">BAGS &amp; POUCHES</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover" style="height:340px;">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473375/ChatGPT_Image_May_8_2026_03_47_27_PM_tyvvgd.png" alt="กระเป๋ากระสอบ">
+      </div>
+      <div class="card-body">
+        <div class="card-title">กระเป๋าผ้ากระสอบ</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          ขนาด 35×35×15 ซม.<br>
+          ผ้ากระสอบ เนื้อแน่น ทนทาน<br>
+          เหมาะสำหรับของชำร่วยและของขวัญองค์กร
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">153</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover" style="height:340px;">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778473771/Gemini_Generated_Image_qr70usqr70usqr70_ysawdh.png" alt="กระเป๋าโน้ตบุ๊ค">
+      </div>
+      <div class="card-body">
+        <div class="card-title">กระเป๋าโน้ตบุ๊ค 14"</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          ไซส์ 14 นิ้ว มีหูหิ้ว<br>
+          ผ้าโพลีเอสเตอร์ทอหนา ทนทาน<br>
+          เหมาะสำหรับของขวัญพนักงานและผู้บริหาร
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">253</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="f-left">
+      <div class="f-co">ITP ASIA CO.,LTD.</div>
+      <div class="f-contact">สิริภัสสร เทียนทิพย์ (น้ำหวาน) 063-541-6196</div>
+    </div>
+    <div class="f-right">
+      <div class="f-note">* ราคาประมาณการเบื้องต้น ยังไม่รวม VAT 7% &nbsp;·&nbsp; ราคาอาจเปลี่ยนแปลงตามปริมาณการสั่งซื้อ</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- PAGE 4: STATIONERY + ACCESSORIES + PACKAGING           -->
+<!-- ====================================================== -->
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="co-name">I T P &nbsp; A S I A &nbsp; C o . , L T D .</div>
+      <div class="co-sub">Premium Corporate Gift Catalogue 2026</div>
+    </div>
+    <div class="h-right">ราคายังไม่รวม VAT 7%</div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--purple);"></div>
+    <div class="s-title">STATIONERY &amp; ACCESSORIES</div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778474074/ChatGPT_Image_8_%E0%B8%9E.%E0%B8%84._2569_16_29_45_vqgwjv.png" alt="สมุดโน้ต">
+      </div>
+      <div class="card-body">
+        <div class="card-title">สมุดโน้ต A5</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          ปกหนังมีสายคาด ไซส์ A5
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">117</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483225/ChatGPT_Image_8_%E0%B8%9E.%E0%B8%84._2569_16_23_22_tilo99.png" alt="ร่มพับ">
+      </div>
+      <div class="card-body">
+        <div class="card-title">ร่มพับ 2 ตอน</div>
+        <div class="card-spec">
+          สกรีนโลโก้ 1 สี 1 จุด<br>
+          พร้อมซองผ้า
+        </div>
+        <div class="card-footer">
+          <div><div class="price-num">124</div><div class="price-unit">บาท/ชิ้น</div></div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:var(--gold);"></div>
+    <div class="s-title">PACKAGING</div>
+  </div>
+
+  <div class="card-wide">
+    <div class="img-wrap img-wrap-cover" style="height:220px;">
+      <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483873/ChatGPT_Image_May_11_2026_02_13_55_PM_bhsrw2.png" alt="ถุงกระดาษ Premium">
+    </div>
+    <div class="card-body">
+      <div class="card-title">ถุงกระดาษ Premium</div>
+      <div class="card-spec">Art Card 260gsm + Gold Foil ปั๊มนูน 2 ด้าน<br>ขนาด 110×210×290 มม.</div>
+      <table class="price-table">
+        <tr><td>100 ใบ</td><td class="price-td-val">188 บาท/ใบ</td></tr>
+        <tr><td>200 ใบ</td><td class="price-td-val">113 บาท/ใบ</td></tr>
+        <tr><td>300 ใบ</td><td class="price-td-val">73 บาท/ใบ</td></tr>
+        <tr><td>500 ใบ</td><td class="price-td-val">57 บาท/ใบ</td></tr>
+        <tr><td>1,000 ใบ</td><td class="price-td-val">45 บาท/ใบ</td></tr>
+      </table>
+      <div class="card-footer">
+        <div><div class="price-num" style="font-size:22px;">45–188</div><div class="price-unit">บาท/ถุง</div></div>
+        <div class="moq">ขั้นต่ำ 100 ใบ</div>
+      </div>
+      <div class="note" style="margin-top:8px;">* ราคาปรับตามปริมาณการสั่งซื้อ</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- PAGE 5: PREMIUM COLLECTION                             -->
+<!-- ====================================================== -->
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="co-name">I T P &nbsp; A S I A &nbsp; C o . , L T D .</div>
+      <div class="co-sub">Premium Corporate Gift Catalogue 2026</div>
+    </div>
+    <div class="h-right">ราคาตามสเปกและปริมาณ<br>สอบถามเพิ่มเติมได้เลย</div>
+  </div>
+
+  <div class="section-label">
+    <div class="s-bar" style="background:linear-gradient(135deg,#C47A00,#F0B429);"></div>
+    <div class="s-title">PREMIUM COLLECTION</div>
+  </div>
+  <p style="font-size:11px; color:var(--light); margin-bottom:14px;">สินค้า Premium คัดพิเศษ — ราคาตามสเปกและปริมาณ กรุณาติดต่อสอบถาม</p>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483650/d8ca5add-28bc-49b9-915f-873f0c9e8946_efgpbh.png" alt="ร่ม Premium">
+      </div>
+      <div class="card-body">
+        <div class="premium-badge">PREMIUM</div>
+        <div class="card-title">ร่มพับ Premium สกรีนลาย</div>
+        <div class="card-spec">ผ้าพิมพ์ลายได้ตามต้องการ<br>โครงโลหะแข็งแรง พร้อมซองผ้า<br>เหมาะสำหรับงาน Event และของขวัญ VIP</div>
+        <div class="card-footer">
+          <div class="price-rfq">กรุณาติดต่อเพื่อรับใบเสนอราคา</div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483997/image_07_zygohg.jpg" alt="กระบอกน้ำ Vacuum Insulated">
+      </div>
+      <div class="card-body">
+        <div class="premium-badge">PREMIUM</div>
+        <div class="card-title">กระบอกน้ำ Vacuum Insulated</div>
+        <div class="card-spec">สแตนเลสสตีล double wall<br>เก็บความเย็น/ร้อนได้นานกว่า 12 ชั่วโมง<br>สกรีนหรือแกะสลักโลโก้ตามสเปก</div>
+        <div class="card-footer">
+          <div class="price-rfq">กรุณาติดต่อเพื่อรับใบเสนอราคา</div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483997/image_08_grednw.jpg" alt="Power Bank eloop E33">
+      </div>
+      <div class="card-body">
+        <div class="premium-badge">PREMIUM</div>
+        <div class="card-title">Power Bank eloop E33</div>
+        <div class="card-spec">ความจุ 20,000 mAh<br>ชาร์จเร็ว Quick Charge รองรับ 2 พอร์ต<br>สกรีนโลโก้ 1 สี 1 ตำแหน่ง</div>
+        <div class="card-footer">
+          <div class="price-rfq">กรุณาติดต่อเพื่อรับใบเสนอราคา</div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-wrap img-wrap-cover">
+        <img src="https://res.cloudinary.com/dy1xajzpa/image/upload/v1778483997/image_09_jt0lqv.jpg" alt="พัดลมพกพา USB Mini Fan">
+      </div>
+      <div class="card-body">
+        <div class="premium-badge">PREMIUM</div>
+        <div class="card-title">พัดลมพกพา USB Mini Fan</div>
+        <div class="card-spec">ชาร์จผ่าน USB สะดวกพกพา<br>มอเตอร์เงียบ ปรับความแรงลมได้<br>สกรีนโลโก้ 1 สี 1 ตำแหน่ง</div>
+        <div class="card-footer">
+          <div class="price-rfq">กรุณาติดต่อเพื่อรับใบเสนอราคา</div>
+          <div class="moq">ขั้นต่ำ 100 ชิ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="f-left">
+      <div class="f-co">ITP ASIA CO.,LTD.</div>
+      <div class="f-contact">สิริภัสสร เทียนทิพย์ (น้ำหวาน) 063-541-6196</div>
+    </div>
+    <div class="f-right">
+      <div class="f-note">* ราคาตามสเปกและปริมาณการสั่งซื้อ &nbsp;·&nbsp; กรุณาติดต่อสอบถามเพื่อรับใบเสนอราคา</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
